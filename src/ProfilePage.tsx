@@ -2,23 +2,23 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function ProfilePage() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        async function fetchUser() {
-            const res = await fetch("/api/userinfo");
+  useEffect(() => {
+    async function fetchUser() {
+      const res = await fetch("/api/userinfo");
 
-            if (res.status === 401) {
-                navigate("/login");
-                return;
-            }
+      if (res.status === 401) {
+        navigate("/login");
+        return;
+      }
 
-            const data = await res.json();
-            console.log(data);
-        }
+      const data = await res.json();
+      console.log(data);
+    }
 
-        fetchUser();
-    }, []);
+    fetchUser();
+  }, []);
 
-    return <h2>Profile Page</h2>;
+  return <h2>Profile Page</h2>;
 }

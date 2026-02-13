@@ -6,8 +6,7 @@ export default function App() {
   return (
     <div>
       <nav>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="/profile">Profile</Link> |{" "}
+        <Link to="/">Home</Link> | <Link to="/profile">Profile</Link> |{" "}
         <Link to="/login">Login</Link>
       </nav>
 
